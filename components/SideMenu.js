@@ -49,7 +49,7 @@ const SideMenu = ({ visible, onClose, onApplicantsPress }) => {
 export default SideMenu;
 
 const styles = StyleSheet.create({
-  overlay: { flex: 1, flexDirection: 'row' },
+  overlay: { flex: 1, flexDirection: 'row-reverse' },
   backdrop: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' },
   menuContainer: {
     width: 280, backgroundColor: COLORS.white, flex: 1,

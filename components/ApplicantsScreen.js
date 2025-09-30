@@ -1,13 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
-import {
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View, } from 'react-native';
 import { APPLICANTS } from '../constants/mockData';
 import { COLORS } from '../constants/theme';
 import ContactDetailsModal from './ContactDetailsModal';

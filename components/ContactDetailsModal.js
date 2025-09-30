@@ -10,25 +10,27 @@ const ContactDetailsModal = ({ visible, onClose, applicant }) => {
       <View style={styles.overlay}>
         <TouchableOpacity style={styles.backdrop} activeOpacity={1} onPress={onClose} />
         <View style={styles.modalContainer}>
-          <View style={styles.contactCard}>
-            <View style={styles.iconContainer}>
-              <Ionicons name="person" size={20} color={COLORS.white} />
+          <View style={styles.contactsWrapper}>
+            <View style={styles.contactCard}>
+              <View style={styles.iconContainer}>
+                <Ionicons name="person" size={20} color={COLORS.white} />
+              </View>
+              <Text style={styles.contactText}>{applicant.fullName}</Text>
             </View>
-            <Text style={styles.contactText}>{applicant.fullName}</Text>
-          </View>
 
-          <View style={styles.contactCard}>
-            <View style={styles.iconContainer}>
-              <Ionicons name="logo-facebook" size={20} color={COLORS.white} />
+            <View style={styles.contactCard}>
+              <View style={styles.iconContainer}>
+                <Ionicons name="logo-facebook" size={20} color={COLORS.white} />
+              </View>
+              <Text style={styles.contactText}>{applicant.socialHandle}</Text>
             </View>
-            <Text style={styles.contactText}>{applicant.socialHandle}</Text>
-          </View>
 
-          <View style={styles.contactCard}>
-            <View style={styles.iconContainer}>
-              <Ionicons name="mail" size={20} color={COLORS.white} />
+            <View style={styles.contactCard}>
+              <View style={styles.iconContainer}>
+                <Ionicons name="mail" size={20} color={COLORS.white} />
+              </View>
+              <Text style={styles.contactText}>{applicant.email}</Text>
             </View>
-            <Text style={styles.contactText}>{applicant.email}</Text>
           </View>
         </View>
       </View>
@@ -52,10 +54,15 @@ const styles = StyleSheet.create({
   modalContainer: {
     width: '100%', maxWidth: 300,
   },
+  contactsWrapper: {
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    borderRadius: 20,
+    padding: 16,
+  },
   contactCard: {
     flexDirection: 'row', alignItems: 'center',
     backgroundColor: '#2D7D5B',
-    borderRadius: 25, paddingVertical: 16, paddingHorizontal: 20, marginBottom: 12,
+    borderRadius: 15, paddingVertical: 16, paddingHorizontal: 20, marginBottom: 12,
   },
   iconContainer: {
     width: 32, height: 32, borderRadius: 16,
