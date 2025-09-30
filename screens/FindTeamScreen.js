@@ -36,12 +36,23 @@ const FindTeamScreen = () => {
         </TouchableOpacity>
         <Text style={styles.title}>Find Team</Text>
         <View style={styles.headerRight}>
-          <TouchableOpacity
-            style={styles.notificationButton}
-            onPress={() => setShowNotifications(true)}
-          >
-            <Ionicons name="notifications-outline" size={24} color={COLORS.dark} />
-          </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.notificationButton}
+          onPress={() => setShowNotifications(true)}
+        >
+        <View>
+          <Ionicons name="notifications-outline" size={24} color={COLORS.dark} />
+          <View style={styles.badge}>
+          <Text style={styles.badgeText}>2</Text>
+          </View>
+        </View>
+        </TouchableOpacity>
+
+
+
+
+
           <TouchableOpacity style={styles.avatarButton}>
             <View style={styles.avatar} />
           </TouchableOpacity>
@@ -103,6 +114,24 @@ const styles = StyleSheet.create({
     alignItems: 'center', justifyContent: 'center',
     elevation: 4, shadowColor: COLORS.dark,
     shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 3.84,
+  },
+
+   badge: {
+    position: 'absolute',
+    right: -6,
+    top: -3,
+    backgroundColor: '#FF3B30',
+    borderRadius: 9,
+    minWidth: 18,
+    height: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 4,
+  },
+  badgeText: {
+    color: '#FFFFFF',
+    fontSize: 10,
+    fontWeight: '600',
   },
 });
 

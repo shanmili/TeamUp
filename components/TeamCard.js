@@ -12,6 +12,11 @@ const TeamCard = ({ team, onPress }) => {
         <View style={styles.textContainer}>
           <Text style={styles.teamName}>{team.name}</Text>
           <Text style={styles.teamSubtitle}>{team.subtitle}</Text>
+          <Text style={styles.description}>{team.description}</Text>
+          <View style={styles.infoRow}>
+            <Text style={styles.infoText}>👥 {team.members} members</Text>
+            <Text style={styles.categoryText}>• {team.category}</Text>
+          </View>
         </View>
       </View>
       <View style={styles.rightSection}>
@@ -32,7 +37,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1, shadowRadius: 2.84,
   },
-  leftSection: { flex: 1, flexDirection: 'row', alignItems: 'center' },
+  leftSection: { flex: 1, flexDirection: 'row', alignItems: 'flex-start' },
   iconContainer: {
     width: 48, height: 48, borderRadius: 12,
     backgroundColor: COLORS.lightGray, alignItems: 'center',
@@ -41,6 +46,10 @@ const styles = StyleSheet.create({
   iconText: { fontSize: 20 },
   textContainer: { flex: 1 },
   teamName: { fontSize: 16, fontWeight: '600', color: COLORS.dark, marginBottom: 2 },
-  teamSubtitle: { fontSize: 14, color: COLORS.gray },
+  teamSubtitle: { fontSize: 14, color: COLORS.gray, marginBottom: 4 },
+  description: { fontSize: 13, color: COLORS.gray, marginBottom: 6, lineHeight: 18 },
+  infoRow: { flexDirection: 'row', alignItems: 'center' },
+  infoText: { fontSize: 12, color: COLORS.gray },
+  categoryText: { fontSize: 12, color: COLORS.gray, marginLeft: 6 },
   rightSection: { paddingLeft: SIZES.margin },
 });

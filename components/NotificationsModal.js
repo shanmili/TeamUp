@@ -23,6 +23,9 @@ const NotificationsModal = ({ visible, onClose, onNotificationPress }) => {
                   <Text style={styles.notificationTitle}>{notification.title}</Text>
                   <Text style={styles.notificationTime}>{notification.time}</Text>
                 </View>
+
+              
+
               </TouchableOpacity>
             ))}
           </ScrollView>
@@ -60,4 +63,11 @@ const styles = StyleSheet.create({
   notificationContent: { flex: 1 },
   notificationTitle: { fontSize: 14, color: COLORS.dark, marginBottom: 4, lineHeight: 20 },
   notificationTime: { fontSize: 12, color: COLORS.gray },
+
+   notificationItemWithBadge: {
+    position: 'absolute',
+    right: 20,
+    top: 16,
+  },
+  
 });
