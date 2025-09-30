@@ -1,13 +1,23 @@
 export const APPLICANTS = [
   {
     id: 1,
-    name: 'Yennefer Doe',
+    name: 'EVASCO, KEYBIRD',
     avatar: '👩‍💼',
     appliedDate: 'Apr 08,2022',
     fullName: 'Keybird Evasco',
     socialHandle: 'Keyb Keyb',
     email: 'keybirdevasco@gmail.com',
   },
+
+  {
+    id: 2,
+    name: 'REJALBO, GLORIBEL',
+    avatar: '👩‍💼',
+    appliedDate: 'Apr 08,2022',
+    fullName: 'Gloribel Rejalbo',
+    socialHandle: 'Glori',
+    email:'rejalbo.gloribel@gmail.com',
+  }
 ];
 
 export const NOTIFICATIONS = [
